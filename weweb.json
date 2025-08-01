@@ -1,0 +1,27 @@
+{
+  "name": "ww-tooltip",
+  "version": "1.0.0",
+  "description": "Modern tooltip component for WeWeb applications",
+  "main": "dist/ww-tooltip.js",
+  "files": [
+    "dist/ww-tooltip.js",
+    "README.md",
+    "WEWEB_IMPORT_GUIDE.md"
+  ],
+  "keywords": [
+    "weweb",
+    "tooltip",
+    "component",
+    "javascript"
+  ],
+  "author": "Stanislas Korner",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stanislasKorner/ww-tooltip.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stanislasKorner/ww-tooltip/issues"
+  },
+  "homepage": "https://github.com/stanislasKorner/ww-tooltip#readme"
+} 
