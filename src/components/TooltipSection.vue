@@ -1,13 +1,10 @@
 <template>
   <div class="ww-tooltip-section">
-    <!-- Section container -->
     <div class="ww-tooltip-container">
-      <!-- Demo content -->
       <div class="ww-tooltip-demo">
         <h3>WeWeb Tooltip Component</h3>
         <p>Modern and accessible tooltip component for WeWeb applications</p>
         
-        <!-- Demo buttons -->
         <div class="demo-buttons">
           <button 
             data-ww-tooltip="Tooltip en haut" 
@@ -38,7 +35,6 @@
           </button>
         </div>
         
-        <!-- Theme demo -->
         <div class="theme-demo">
           <h4>Thèmes</h4>
           <button 
@@ -64,19 +60,16 @@
 export default {
   name: 'WwTooltipSection',
   props: {
-    // WeWeb props
     wwSection: {
       type: Object,
       default: () => ({})
     }
   },
   mounted() {
-    // Initialize tooltips when component is mounted
     this.initTooltips();
   },
   methods: {
     initTooltips() {
-      // Wait for DOM to be ready
       this.$nextTick(() => {
         if (window.initWwTooltips) {
           window.initWwTooltips();
