@@ -5,7 +5,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'ww-tooltip.js',
-    library: 'WwTooltip',
+    library: 'WwTooltipSection',
     libraryTarget: 'umd',
     globalObject: 'this'
   },
