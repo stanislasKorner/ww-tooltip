@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeWeb Tooltip Component - Démonstration</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            padding: 40px;
+            background-color: #f8fafc;
+        }
+        .demo-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .demo-section {
+            margin-bottom: 40px;
+        }
+        .demo-section h2 {
+            color: #1f2937;
+            margin-bottom: 20px;
+        }
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .demo-item {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            background: #f9fafb;
+        }
+        button {
+            padding: 8px 16px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            background: white;
+            color: #374151;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+        button:hover {
+            background: #f3f4f6;
+            border-color: #9ca3af;
+        }
+        .icon {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <h1>WeWeb Tooltip Component - Démonstration</h1>
+        
+        <div class="demo-section">
+            <h2>Positions</h2>
+            <div class="demo-grid">
+                <div class="demo-item">
+                    <button data-ww-tooltip="Tooltip en haut" data-ww-tooltip-position="top">
+                        Haut
+                    </button>
+                </div>
+                <div class="demo-item">
+                    <button data-ww-tooltip="Tooltip en bas" data-ww-tooltip-position="bottom">
+                        Bas
+                    </button>
+                </div>
+                <div class="demo-item">
+                    <button data-ww-tooltip="Tooltip à gauche" data-ww-tooltip-position="left">
+                        Gauche
+                    </button>
+                </div>
+                <div class="demo-item">
+                    <button data-ww-tooltip="Tooltip à droite" data-ww-tooltip-position="right">
+                        Droite
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>Thèmes</h2>
+            <div class="demo-grid">
+                <div class="demo-item">
+                    <button data-ww-tooltip="Thème sombre" data-ww-tooltip-theme="dark">
+                        Sombre
+                    </button>
+                </div>
+                <div class="demo-item">
+                    <button data-ww-tooltip="Thème clair" data-ww-tooltip-theme="light">
+                        Clair
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>Options avancées</h2>
+            <div class="demo-grid">
+                <div class="demo-item">
+                    <button data-ww-tooltip="Avec délai de 500ms" data-ww-tooltip-delay="500">
+                        Délai
+                    </button>
+                </div>
+                <div class="demo-item">
+                    <button data-ww-tooltip="Sans flèche" data-ww-tooltip-arrow="false">
+                        Sans flèche
+                    </button>
+                </div>
+                <div class="demo-item">
+                    <button data-ww-tooltip="Largeur maximale de 300px" data-ww-tooltip-max-width="300px">
+                        Largeur max
+                    </button>
+                </div>
+                <div class="demo-item">
+                    <button data-ww-tooltip="Offset de 20px" data-ww-tooltip-offset="20">
+                        Offset
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>Contenu HTML</h2>
+            <div class="demo-grid">
+                <div class="demo-item">
+                    <button data-ww-tooltip="<strong>Contenu riche</strong><br><em>Avec du HTML</em><br>🎉">
+                        HTML
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>Utilisation programmatique</h2>
+            <div class="demo-grid">
+                <div class="demo-item">
+                    <button id="programmatic-tooltip">
+                        Programmatique
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="dist/ww-tooltip.js"></script>
+    <script>
+        // Exemple d'utilisation programmatique
+        document.addEventListener('DOMContentLoaded', function() {
+            const button = document.getElementById('programmatic-tooltip');
+            new WwTooltip(button, {
+                content: 'Créé programmatiquement',
+                position: 'bottom',
+                theme: 'light',
+                delay: 200
+            });
+        });
+    </script>
+</body>
+</html> 
